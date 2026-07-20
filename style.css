@@ -1,15 +1,8 @@
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-
-html {
-
-    scroll-behavior: smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
@@ -17,37 +10,37 @@ html {
 
 body {
 
+font-family:
+Inter,
+Arial,
+sans-serif;
 
-    font-family: Arial, Helvetica, sans-serif;
+background:#faf9fc;
 
-    background: #0b0714;
+color:#111;
 
-    color: white;
-
-    line-height: 1.6;
-
+line-height:1.6;
 
 }
 
 
 
 
-/* NAVIGATION */
+
+/* NAV */
 
 
 .navbar {
 
+display:flex;
 
-    display: flex;
+justify-content:space-between;
 
-    justify-content: space-between;
+align-items:center;
 
-    align-items: center;
+padding:30px 8%;
 
-    padding: 25px 8%;
-
-    background: #12091f;
-
+background:white;
 
 }
 
@@ -55,37 +48,35 @@ body {
 
 .logo {
 
+font-size:28px;
 
-    font-size: 30px;
+font-weight:800;
 
-    font-weight: bold;
-
-    color: #a855f7;
-
+color:#111;
 
 }
 
 
 
-.nav-links a {
+nav a {
+
+margin-left:30px;
+
+text-decoration:none;
+
+color:#444;
+
+font-weight:500;
+
+}
 
 
-    color: white;
+nav a:hover {
 
-    text-decoration: none;
-
-    margin-left: 25px;
+color:#7c3aed;
 
 }
 
-
-.nav-links a:hover {
-
-
-    color: #a855f7;
-
-
-}
 
 
 
@@ -99,18 +90,31 @@ body {
 .hero {
 
 
-    min-height: 90vh;
+display:grid;
 
-    display: flex;
+grid-template-columns:1fr 1fr;
 
-    justify-content: center;
+align-items:center;
 
-    align-items: center;
+gap:50px;
 
-    text-align: center;
+padding:80px 8%;
 
-    padding: 40px 10%;
 
+}
+
+
+
+.tag {
+
+
+color:#7c3aed;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+font-size:14px;
 
 }
 
@@ -119,54 +123,48 @@ body {
 .hero h1 {
 
 
-    font-size: 70px;
+font-size:
+clamp(45px,6vw,75px);
 
-    line-height: 1.1;
+line-height:1.05;
 
-    margin-bottom: 20px;
-
-
-}
-
-
-
-.hero p {
-
-
-    font-size: 20px;
-
-    color: #d8c7ff;
-
-    max-width: 600px;
+margin:20px 0;
 
 
 }
 
 
 
-.button {
+.subtitle {
+
+font-size:20px;
+
+color:#555;
+
+max-width:500px;
+
+}
 
 
-    display: inline-block;
 
-    margin-top: 30px;
+.primary-btn {
 
-    padding: 15px 40px;
 
-    border-radius: 50px;
+display:inline-block;
 
-    background: linear-gradient(
-        135deg,
-        #9333ea,
-        #c084fc
-    );
+margin-top:35px;
 
-    color:white;
+padding:16px 35px;
 
-    text-decoration:none;
+border-radius:50px;
 
-    font-weight:bold;
+background:#7c3aed;
 
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
 
 }
 
@@ -174,16 +172,36 @@ body {
 
 
 
+.hero-image img {
 
 
-/* GENERAL SECTIONS */
+width:100%;
+
+height:600px;
+
+object-fit:cover;
+
+border-radius:30px;
 
 
-section {
+}
 
 
-    padding: 80px 10%;
 
+
+
+
+
+
+/* SECTIONS */
+
+
+.section,
+.process,
+.join {
+
+
+padding:100px 8%;
 
 }
 
@@ -192,11 +210,29 @@ section {
 h2 {
 
 
-    text-align:center;
+font-size:45px;
 
-    font-size:40px;
+text-align:center;
 
-    margin-bottom:40px;
+margin-bottom:25px;
+
+
+}
+
+
+
+.section-text {
+
+
+max-width:700px;
+
+margin:auto;
+
+text-align:center;
+
+color:#555;
+
+font-size:20px;
 
 
 }
@@ -207,19 +243,49 @@ h2 {
 
 
 
-/* ABOUT */
+/* FEATURES */
 
 
-.about p {
+.features {
 
 
-    max-width:700px;
+display:grid;
 
-    margin:auto;
+grid-template-columns:
+repeat(3,1fr);
 
-    text-align:center;
+gap:25px;
 
-    color:#d8c7ff;
+margin-top:60px;
+
+
+}
+
+
+
+.feature {
+
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+
+}
+
+
+
+.feature h3 {
+
+
+margin-bottom:15px;
+
+color:#7c3aed;
 
 
 }
@@ -231,48 +297,58 @@ h2 {
 
 
 
-/* SERVICES */
+/* PROCESS */
 
 
-.service-container {
+.process {
 
 
-    display:grid;
+background:#111;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-
+color:white;
 
 }
 
 
 
-.service-card {
+.steps {
 
 
-    background:#171025;
+display:grid;
 
-    padding:35px;
+grid-template-columns:
+repeat(3,1fr);
 
-    border-radius:20px;
+gap:30px;
+
+}
+
+
+
+.step {
+
+
+background:#1d1d1d;
+
+padding:40px;
+
+border-radius:25px;
 
 
 }
 
 
+.step span {
 
-.service-card h3 {
 
+color:#a78bfa;
 
-    color:#c084fc;
+font-size:40px;
 
-    margin-bottom:15px;
+font-weight:bold;
 
 
 }
-
 
 
 
@@ -283,124 +359,90 @@ h2 {
 /* FORM */
 
 
-.signup {
+.join {
 
 
-    background:#12091f;
+text-align:center;
+
+}
+
+
+
+.form-container {
+
+
+background:white;
+
+max-width:600px;
+
+margin:40px auto;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
 
 
 }
 
 
 
-.form-box {
+form {
 
 
-    max-width:600px;
+display:flex;
 
-    margin:auto;
+flex-direction:column;
 
-    background:#171025;
-
-    padding:40px;
-
-    border-radius:25px;
-
+gap:20px;
 
 }
 
 
 
-.signup-form {
+input,
+textarea {
 
 
-    display:flex;
+padding:16px;
 
-    flex-direction:column;
+border-radius:12px;
 
-    gap:20px;
+border:1px solid #ddd;
 
-
-}
-
-
-
-.signup-form input,
-.signup-form textarea {
-
-
-    padding:15px;
-
-    border-radius:10px;
-
-    border:none;
-
-    background:#0b0714;
-
-    color:white;
-
-    font-size:16px;
-
+font-size:16px;
 
 }
 
 
 
-.signup-form textarea {
+textarea {
 
 
-    height:120px;
-
+height:130px;
 
 }
-
 
 
 
 button {
 
 
-    padding:15px;
+padding:16px;
 
-    border:none;
+border:none;
 
-    border-radius:50px;
+border-radius:50px;
 
-    background:#9333ea;
+background:#7c3aed;
 
-    color:white;
+color:white;
 
-    font-weight:bold;
+font-weight:bold;
 
-    cursor:pointer;
-
-
-}
-
-
-
-
-
-
-
-
-/* TESTIMONIAL */
-
-
-.testimonial-card {
-
-
-    max-width:600px;
-
-    margin:auto;
-
-    background:#171025;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    text-align:center;
+cursor:pointer;
 
 
 }
@@ -409,26 +451,18 @@ button {
 
 
 
-
-
-
-/* FOOTER */
 
 
 footer {
 
 
-    text-align:center;
+text-align:center;
 
-    padding:40px;
+padding:40px;
 
-    background:#07040d;
-
-    color:#cfc2e8;
-
+background:white;
 
 }
-
 
 
 
@@ -439,28 +473,37 @@ footer {
 /* MOBILE */
 
 
-@media(max-width:700px){
+@media(max-width:900px){
 
 
-.navbar {
+.hero {
 
-
-    flex-direction:column;
-
-    gap:20px;
-
+grid-template-columns:1fr;
 
 }
 
 
-.hero h1 {
+.hero-image img {
 
-
-    font-size:45px;
-
+height:400px;
 
 }
 
+
+
+.features,
+.steps {
+
+grid-template-columns:1fr;
+
+}
+
+
+nav {
+
+display:none;
+
+}
 
 
 }
