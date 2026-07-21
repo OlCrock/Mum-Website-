@@ -355,6 +355,44 @@ font-weight:bold;
 
 
 
+/* CLASS FORMS */
+
+
+.class-forms {
+
+display:flex;
+
+gap:40px;
+
+justify-content:center;
+
+align-items:stretch;
+
+max-width:1100px;
+
+margin:40px auto 0;
+
+}
+
+
+
+.class-card {
+
+flex:1;
+
+background:#1d1d1d;
+
+padding:40px;
+
+border-radius:25px;
+
+}
+
+
+
+
+
+
 
 /* FORM */
 
@@ -495,6 +533,13 @@ height:400px;
 .steps {
 
 grid-template-columns:1fr;
+
+}
+
+
+.class-forms {
+
+flex-direction:column;
 
 }
 
