@@ -1,39 +1,39 @@
-// Get the form and message element
-const form = document.getElementById("applicationForm");
-const message = document.getElementById("formMessage");
+// Attach the same submit behaviour to every form on the page
+document.querySelectorAll("form").forEach(form => {
 
-// Listen for the form being submitted
-form.addEventListener("submit", async function (event) {
+    const message = form.querySelector("p");
 
-    // Stop the browser going to another page
-    event.preventDefault();
+    form.addEventListener("submit", async (event) => {
 
-    // Create form data
-    const formData = new FormData(form);
+        // Prevent the browser submitting normally
+        event.preventDefault();
 
-    try {
+        try {
 
-        // Send data to Google Forms
-        await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-        });
+            await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                mode: "no-cors"
+            });
 
-        // Success message
-        message.textContent = "✓ Thank you! Your application has been submitted.";
-        message.style.color = "#2e7d32";
+            if (message) {
+                message.textContent = "✓ Thank you! Your submission has been received.";
+                message.style.color = "#2e7d32";
+            }
 
-        // Clear the form
-        form.reset();
+            form.reset();
 
-    } catch (error) {
+        } catch (error) {
 
-        // Error message
-        message.textContent = "Something went wrong. Please try again.";
-        message.style.color = "#c62828";
+            if (message) {
+                message.textContent = "Something went wrong. Please try again.";
+                message.style.color = "#c62828";
+            }
 
-        console.error(error);
-    }
+            console.error(error);
+
+        }
+
+    });
 
 });
