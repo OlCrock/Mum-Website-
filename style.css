@@ -552,3 +552,32 @@ display:none;
 
 
 }
+
+/* FORCE CLASS CARDS SIDE BY SIDE */
+
+.class-forms {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 40px;
+    width: 100%;
+}
+
+
+.class-card {
+    width: 50%;
+}
+
+
+/* Mobile stacking */
+
+@media (max-width: 900px) {
+
+    .class-forms {
+        flex-direction: column !important;
+    }
+
+    .class-card {
+        width: 100%;
+    }
+
+}
