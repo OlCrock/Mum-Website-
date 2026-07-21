@@ -268,38 +268,38 @@ Apply today and take the first step towards your goals.
 <div class="form-container">
 
 
-<!-- Replace this with your Google Form/custom form -->
+<form
+    id="applicationForm"
+    action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+    method="POST">
 
-<form>
+    <input
+        type="text"
+        name="entry.YOUR_NAME_FIELD_ID"
+        placeholder="Your name"
+        required>
 
+    <input
+        type="email"
+        name="entry.YOUR_EMAIL_FIELD_ID"
+        placeholder="Email address"
+        required>
 
-<input 
-type="text"
-placeholder="Your name">
+    <input
+        type="tel"
+        name="entry.YOUR_PHONE_FIELD_ID"
+        placeholder="Phone number">
 
+    <textarea
+        name="entry.YOUR_GOALS_FIELD_ID"
+        placeholder="What are your goals?"
+        required></textarea>
 
+    <button type="submit">
+        Submit application
+    </button>
 
-<input
-type="email"
-placeholder="Email address">
-
-
-
-<input
-type="tel"
-placeholder="Phone number">
-
-
-
-<textarea
-placeholder="What are your goals?"></textarea>
-
-
-
-<button>
-Submit application
-</button>
-
+    <p id="formMessage"></p>
 
 </form>
 
@@ -339,7 +339,7 @@ Instagram | Email | Contact
 
 </footer>
 
-
+<script src="js/form.js"></script>
 
 </body>
 
